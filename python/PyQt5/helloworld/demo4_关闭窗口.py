@@ -11,6 +11,7 @@ class Example(QWidget):
 
     def initUI(self):
 
+        #原型：QPushButton(按钮文本, 父级组件)
         qbtn = QPushButton('Quit', self)
         qbtn.clicked.connect(QCoreApplication.instance().quit)
         qbtn.resize(qbtn.sizeHint())
