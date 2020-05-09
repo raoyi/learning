@@ -9,49 +9,49 @@ soup=BeautifulSoup(demo,"html.parser")
 #用 html.parser解析器解析demo(即 r.text),赋给soup
 print(soup.prettify())
 #输出解析后的结果
-print("\n\n\n\n\n")
+
 print(soup.title)
 #输出html的 <title>与</title>之中的内容
-print("\n\n\n\n\n")
+
 tag=soup.a
 print(tag)
 #获取(第一个)a标签（链接），并输出
-print("\n\n\n\n\n")
+
 print(soup.a.name)
 #获取a标签的名字，并输出
-print("\n\n\n\n\n")
+
 print(soup.a.parent.name)
 #获取a标签的父标签的名字，并输出
 tag=soup.a
 #获取a标签
-print("\n\n")
+
 print(tag.attrs)
 #输出a标签的属性
-print("\n\n")
+
 print(tag.attrs['class'])
 #输出a标签的属性中class属性的值
-print("\n\n")
+
 print(tag.attrs['href'])
 #输出a标签的属性中href属性的值
-print("\n\n")
+
 print(type(tag.attrs))
 #a.attrs(a的属性的类型)  结果为<class 'dict'>  (dict:字典)
-print("\n\n")
+
 print(type(tag))
-print("\n\n")
+
 print(soup.a)
 #输出a标签的内容
-print("\n\n")
+
 print(soup.a.string)
 #获取a标签中未用<>包含的部分
-print("\n\n")
+
 print(soup.head)
 #获取从<head>开头 到</head>结尾的内容,并输出
-print("\n\n")
+
 print(soup.head.contents)
 #soup.head.contents 获取的内容比soup.head获取的内容少了最前面的<head>和最后面的</head>
 #其余内容放在[]中,(即类型为列表)
-print("\n\n")
+
 '''
 .parent  节点的父亲标签
 .parents 节点的先辈标签的迭代类型，用于循环遍历先辈节点
@@ -61,14 +61,14 @@ print("\n\n")
 '''
 print(soup.title.parent)
 #获取title标签的父节点,并输出
-print("\n\n")
+
 print(soup.html.parent)
 #获取html标签的父节点,html已是最高层（根结点）
 #它没有父节点,返回它本身
-print("\n\n")
+
 print(soup.parent)
 #soup没有父节点,返回None
-print("\n\n")
+
 for parent in soup.a.parents:
     if parent is None:#soup没有父节点,返回None，这时
         print(parent)
@@ -85,17 +85,17 @@ for parent in soup.a.parents:
 .previous_siblings 迭代类型,返回按照html文本顺序的前续所有平行节点标签
 必须是同一个父节点下的平行节点
 '''
-print("\n\n")
+
 print(soup.a.next_sibling)
 #获取a标签的下一个平行标签,并输出
-print("\n\n")
+
 print(soup.a.previous_sibling)
 #获取a标签的上一个平行节点标签
-print("\n\n")
+
 for sibling in soup.a.next_siblings:
     print(sibling)
 #循环遍历a节点标签的所有后续节点标签,并输出
-print("\n\n")
+
 for sibling in soup.a.previous_siblings:
     print(sibling)
 #循环遍历a节点标签的所有前续节点标签,并输出
