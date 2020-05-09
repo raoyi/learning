@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-url="http://python123.io/ws/demo.html"
+url="https://www.kanunu8.com/tuili/9506/"
 r=requests.get(url)
+r.encoding='gb2312'
 demo=r.text
 #将r.text赋给demo
 soup=BeautifulSoup(demo,"html.parser")
