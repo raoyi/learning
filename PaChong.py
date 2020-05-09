@@ -13,6 +13,9 @@ print(soup.prettify())
 print(soup.title)
 #输出html的 <title>与</title>之中的内容
 
+print(soup.h1.string)
+#获取h1标签的内容
+
 tag=soup.a
 print(tag)
 #获取(第一个)a标签（链接），并输出
