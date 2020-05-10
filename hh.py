@@ -12,7 +12,8 @@ headers = {
     #"accept-language":"zh-CN,zh;q=0.9",
     #"Connection":"keep-alive",
     #"upgrade-insecure-requests":"1",
-    "user-agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
+    "user-agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"
+}
 
 # 获取html
 r = requests.get(indexUrl, timeout = 10, headers = headers)
